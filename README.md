@@ -1,93 +1,51 @@
-# ecommerce demo application
+# Hotel Room booking Management Project
 
-## VS Code extensions
+End User: The end users of the hotel booking management project would be Admin and User of the hotel.
 
-- https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
-- https://marketplace.visualstudio.com/items?itemName=NuclleaR.vscode-extension-auto-import
-- https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+Project objective : The objective of the hotel booking management project is to streamline and automate various hotel operations to improve efficiency, enhance guest experiences, and optimize overall management processes.
 
-## installation
+Project Scope( updation - not too big ,not too small and precise ) -
 
-```bash
+Project SCOPE:-
+A software application for a Hotel Booking System. It should display the different categories in which rooms are available to book a room in a hotel, the different facilities and options available w.r.t prices and accordingly generate the bill including the customer details, the duration of the reservation and the amount payable by introducing personal information.
 
-# create a new react app
-> npx create-react-app web-app
+The key components of a Hotel Booking System include:
 
-> cd web-app
+Room Booking: This component of the system allows guests to easily book rooms online, view available rooms, and check in and out of the hotel.
 
-# install required packages
-> yarn add react-router-dom react-redux @reduxjs/toolkit axios react-toastify
+Reservation Management: This component of the system helps hotel manager to manage reservations, allocate rooms, and keep track of room availability. Functionality performed by Customer(User):
 
-```
+Customer Registration : Any customer can register on a website using the registration.
 
-## redux
+Customer Login : This is the login form, from which customers can login into the system.
 
-- create a store
+Check Room : This is the check room form where customers can easily check availability of any type of hotel rooms.
 
-```javascript
-import { configureStore } from '@reduxjs/toolkit'
+Customer Booking : This is a customer booking form where customers will be able to book a room.
 
-// create a new store
-export const store = configureStore({
-  reducer: {},
-})
-```
+Customer Order Confirmation: This is the customer booking confirmation form where a customer will be able to confirm his booking.
 
-- include the whole application in Provider Object inside index.js
+Customer Payment : This is the customer payment form for the Room booking where customers will be able to make payment.
 
-```javascript
-import { Provider } from 'react-redux'
-import { store } from './store'
+Customer My Bookings : Customers can see their history of booking from this form.
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </React.StrictMode>
-)
-```
+Customer Feedback : This is a customer feedback form where customers can give feedback on the Room.
 
-- create a slice
+Change Password : This is the change password form where the user can change his account password.
 
-```javascript
-import { createSlice } from '@reduxjs/toolkit'
+Functionality performed by Admin:
 
-export const authSlice = createSlice({
-  // name of slice (must be unique)
-  name: 'auth',
-  initialState: {
-    status: false,
-  },
-  reducers: {
-    // action: action handler
-    login: (state) => {
-      state.status = true
-    },
-    // action: action handler
-    logout: (state) => {
-      state.status = false
-    },
-  },
-})
+Login For Admin
 
-export const { login, logout } = authSlice.actions
-export default authSlice.reducer
-```
+Admin can see the list of all user details
 
-- add the slice's reducer to the store configuration
+Admin can see the list of all booking
 
-```javascript
-import { configureStore } from '@reduxjs/toolkit'
-import authSlice from './features/authSlice'
+Admin can edit/delete the room
 
-// create a new store
-export const store = configureStore({
-  reducer: {
-    auth: authSlice,
-  },
-})
-```
+Change Password For Admin
+
+start command - 
+
+yarn install 
+yarn start
